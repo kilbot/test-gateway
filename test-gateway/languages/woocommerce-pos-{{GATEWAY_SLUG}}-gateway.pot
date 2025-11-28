@@ -1,0 +1,63 @@
+# Copyright (C) 2025 {{AUTHOR_NAME}}
+# This file is distributed under the GNU General Public License v3.0.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce POS {{GATEWAY_NAME}} Gateway 0.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/woocommerce-pos-{{GATEWAY_SLUG}}-gateway\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-10-01T14:10:14+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: woocommerce-pos-{{GATEWAY_SLUG}}-gateway\n"
+
+#. Plugin Name of the plugin
+#: wcpos-{{GATEWAY_SLUG}}.php
+msgid "WooCommerce POS {{GATEWAY_NAME}} Gateway"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: wcpos-{{GATEWAY_SLUG}}.php
+msgid "https://github.com/{{GITHUB_USERNAME}}/{{REPO_NAME}}"
+msgstr ""
+
+#. Description of the plugin
+#: wcpos-{{GATEWAY_SLUG}}.php
+msgid "{{GATEWAY_DESCRIPTION}}"
+msgstr ""
+
+#. Author of the plugin
+#: wcpos-{{GATEWAY_SLUG}}.php
+msgid "{{AUTHOR_NAME}}"
+msgstr ""
+
+#: wcpos-{{GATEWAY_SLUG}}.php:57
+msgid "Title"
+msgstr ""
+
+#: wcpos-{{GATEWAY_SLUG}}.php:59
+msgid "This controls the title which the user sees during checkout."
+msgstr ""
+
+#: wcpos-{{GATEWAY_SLUG}}.php:60
+msgid "{{GATEWAY_NAME}}"
+msgstr ""
+
+#: wcpos-{{GATEWAY_SLUG}}.php:64
+msgid "Description"
+msgstr ""
+
+#: wcpos-{{GATEWAY_SLUG}}.php:66
+msgid "This controls the description which the user sees during checkout."
+msgstr ""
+
+#: wcpos-{{GATEWAY_SLUG}}.php:67
+msgid "{{GATEWAY_DEFAULT_DESCRIPTION}}"
+msgstr ""
+
+#: wcpos-{{GATEWAY_SLUG}}.php:81
+msgid "Awaiting payment"
+msgstr ""
