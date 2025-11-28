@@ -1,0 +1,46 @@
+name: Update POT file
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-pot:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '7.4'
+        
+    - name: Install WP-CLI
+      run: |
+        curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+        chmod +x wp-cli.phar
+        sudo mv wp-cli.phar /usr/local/bin/wp
+        
+    - name: Generate POT file
+      run: |
+        wp i18n make-pot . languages/woocommerce-pos-{{GATEWAY_SLUG}}-gateway.pot \
+          --slug="woocommerce-pos-{{GATEWAY_SLUG}}-gateway" \
+          --domain="woocommerce-pos-{{GATEWAY_SLUG}}-gateway" \
+          --exclude="node_modules,vendor,tests" || true
+          
+    - name: Commit changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add languages/*.pot || true
+        git diff --staged --quiet || git commit -m "Update POT file"
+        
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: main
+
